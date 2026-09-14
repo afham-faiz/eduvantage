@@ -1,0 +1,35 @@
+{
+  "name": "@eduvantage/ui-web",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Minimal shared web UI package. Proves workspace-package React imports across the Next.js apps — intentionally not a component library. Ailam owns the real design system.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "echo \"no tests yet\" && exit 0"
+  },
+  "dependencies": {
+    "@eduvantage/design-tokens": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@eduvantage/config": "workspace:*",
+    "@types/react": "^19.3.0",
+    "eslint": "^9.12.0",
+    "react": "^19.3.0",
+    "typescript": "~6.0.3"
+  }
+}

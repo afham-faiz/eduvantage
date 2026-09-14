@@ -1,0 +1,46 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# build outputs
+dist/
+build/
+.next/
+.turbo/
+out/
+*.tsbuildinfo
+
+# env
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# expo
+.expo/
+.expo-shared/
+
+# supabase
+supabase/.branches/
+supabase/.temp/
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# os / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# testing
+coverage/
+apps/api/openapi.json
+
+# Next.js 16 auto-regenerates these on `next dev` (per-app AI-agent-docs
+# pointer). The root CLAUDE.md is our real source of truth — see there.
+apps/*/AGENTS.md
+apps/*/CLAUDE.md

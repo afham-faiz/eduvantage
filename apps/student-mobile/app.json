@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Student Mobile",
+    "slug": "eduvantage-student-mobile",
+    "scheme": "eduvantage-student-mobile",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.eduvantage.studentmobile"
+    },
+    "android": {
+      "package": "com.eduvantage.studentmobile"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": ["expo-status-bar"]
+  }
+}

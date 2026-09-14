@@ -1,0 +1,33 @@
+{
+  "name": "@eduvantage/api-client",
+  "private": true,
+  "version": "0.1.0",
+  "description": "TypeScript API client generated from the NestJS OpenAPI document. Do not hand-edit src/generated/** — regenerate with `pnpm generate:api`.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "lint": "eslint . --ignore-pattern src/generated",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "echo \"no tests yet\" && exit 0",
+    "generate": "node scripts/generate.mjs"
+  },
+  "dependencies": {
+    "openapi-fetch": "^0.17.0"
+  },
+  "devDependencies": {
+    "@eduvantage/config": "workspace:*",
+    "@types/node": "^24.13.4",
+    "eslint": "^9.12.0",
+    "openapi-typescript": "^7.13.0",
+    "typescript": "~6.0.3"
+  }
+}

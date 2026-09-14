@@ -1,0 +1,31 @@
+{
+  "name": "@eduvantage/contracts",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Transport-safe schemas, types and enums shared between the API and all clients. Platform-neutral only — no server, database, or React code.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@eduvantage/config": "workspace:*",
+    "eslint": "^9.12.0",
+    "typescript": "~6.0.3",
+    "vitest": "^2.1.2"
+  }
+}

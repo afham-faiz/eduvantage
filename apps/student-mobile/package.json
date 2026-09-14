@@ -1,0 +1,34 @@
+{
+  "name": "@eduvantage/student-mobile",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Student Mobile — minimal Expo scaffold (foundation only, not a launch blocker).",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "expo start",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "build": "expo export",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"no tests yet\" && exit 0"
+  },
+  "dependencies": {
+    "@eduvantage/contracts": "workspace:*",
+    "expo": "~57.0.0",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-web": "^0.21.2"
+  },
+  "devDependencies": {
+    "@eduvantage/config": "workspace:*",
+    "@types/react": "~19.2.18",
+    "babel-preset-expo": "~57.0.11",
+    "eslint": "^9.12.0",
+    "typescript": "^6.0.3"
+  }
+}

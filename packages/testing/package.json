@@ -1,0 +1,16 @@
+{
+  "name": "@eduvantage/testing",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Minimal shared testing utilities/config for the Eduvantage monorepo. Grows only as real, repeated needs show up.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./vitest.config.js": "./vitest.config.js"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.2"
+  }
+}

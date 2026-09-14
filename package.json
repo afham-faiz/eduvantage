@@ -1,0 +1,26 @@
+{
+  "name": "eduvantage",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Eduvantage monorepo — contract-first cross-platform modular monolith",
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@11.9.0",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "generate:api": "pnpm --filter @eduvantage/api-client run generate"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "turbo": "^2.1.3",
+    "typescript": "~6.0.3"
+  }
+}

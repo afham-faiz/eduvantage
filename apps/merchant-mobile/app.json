@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Merchant Mobile",
+    "slug": "eduvantage-merchant-mobile",
+    "scheme": "eduvantage-merchant-mobile",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.eduvantage.merchantmobile"
+    },
+    "android": {
+      "package": "com.eduvantage.merchantmobile"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": ["expo-status-bar"]
+  }
+}

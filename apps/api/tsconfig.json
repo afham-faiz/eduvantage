@@ -1,0 +1,9 @@
+{
+  "extends": "@eduvantage/config/tsconfig.nest.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "types": ["node", "jest"]
+  },
+  "include": ["src"]
+}

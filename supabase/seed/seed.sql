@@ -1,0 +1,2 @@
+-- Intentionally empty — see README.md. Add local dev seed data once real
+-- product tables exist.
