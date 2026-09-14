@@ -12,7 +12,12 @@ import { API_GLOBAL_PREFIX } from "../src/constants";
  * Consumed by packages/api-client's `pnpm generate` step.
  */
 async function main() {
-  const app = await NestFactory.create(AppModule, { logger: false });
+  // abortOnError defaults to true, which makes Nest call process.exit()
+  // itself on a bootstrap failure (e.g. a provider throwing in its
+  // constructor) — bypassing our catch below entirely and, combined with
+  // `logger: false`, failing completely silently. false lets the error
+  // reach us so it's actually reported.
+  const app = await NestFactory.create(AppModule, { logger: false, abortOnError: false });
   app.setGlobalPrefix(API_GLOBAL_PREFIX);
   await app.init();
 
@@ -26,5 +31,8 @@ async function main() {
 
 main().catch((err) => {
   console.error(err);
-  process.exit(1);
+  // Set exitCode rather than calling process.exit() directly — exit()
+  // can terminate the process before a piped/redirected stderr write
+  // finishes flushing, silently swallowing this exact error message.
+  process.exitCode = 1;
 });

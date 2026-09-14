@@ -38,5 +38,10 @@ same backend serves `student-web`/`merchant-web`/`admin-web` today and
 `student-mobile`/`merchant-mobile` (Expo/React Native) later, without a
 rewrite.
 
-None of the above is implemented yet — see the root `README.md` and
-`docs/ARCHITECTURE.md` for what Foundation 001 actually contains.
+Most of the above is not implemented yet. As of Foundation 002, public deal
+discovery is real end-to-end: institutions, merchants, and deals live in
+Postgres, `GET /v1/deals`/`GET /v1/deals/:slug` serve them, and
+`student-web`'s homepage renders actual seeded deals through the generated
+client. Everything else above — accounts, verification, redemption,
+merchant/admin tooling — is still ahead. See the root `README.md` and
+`docs/ARCHITECTURE.md` for the current technical detail.
